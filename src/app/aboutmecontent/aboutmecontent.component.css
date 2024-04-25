@@ -1,0 +1,17 @@
+#aboutme {
+  font-family: manrope-light;
+  font-size: 20px;
+}
+
+/*MOBILE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 800px) {
+  .rect {
+    height: 500px;
+  }
+  #aboutme {
+    font-size: 25px;
+    width: 95%;
+    margin-top: 30px;
+    text-align: justify;
+  }
+}/*# sourceMappingURL=aboutmecontent.component.css.map */

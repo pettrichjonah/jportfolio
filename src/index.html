@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home - JP Photo&Media</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<script>
+  function reply_click(clicked_id) {
+	var modal = document.getElementById("modal");
+	var img = document.getElementById(clicked_id);
+	var modalImg = document.getElementById("modalimg");
+
+	modal.style.display = "block";
+	modalImg.src = img.src;
+
+	var span = document.getElementById("modal");
+
+	span.onclick = function () {
+		modal.style.display = "none";
+	}
+}
+</script>
+<body>
+  <app-root>
+  </app-root>
+</body>
+</html>

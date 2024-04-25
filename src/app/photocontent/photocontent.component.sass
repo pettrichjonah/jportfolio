@@ -1,0 +1,68 @@
+img
+	width: 100%
+	height: auto
+	margin-bottom: 1vh
+	border-radius: 5px
+	cursor: pointer
+
+#modal 
+	display: none
+	position: fixed
+	z-index: 1
+	padding-top: 0px
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: white
+	cursor: pointer
+
+#flex 
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+
+/* Modal Content (Image) */
+#modalimg 
+	max-width: 85%
+	max-height: 85%
+	width: auto
+	height: auto
+	animation-name: zoom
+	animation-duration: 0.6s
+
+@keyframes zoom 
+	from 
+		opacity: 0
+	
+
+	to 
+		opacity: 1
+	
+
+/* The Close Button */
+.close 
+	position: absolute
+	top: 15px
+	right: 35px
+	color: black
+	font-size: 40px
+	font-weight: bold
+	transition: 0.3s
+
+.close:hover,
+.close:focus 
+	text-decoration: none
+	cursor: pointer
+
+
+/*MOBILE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-device-width: 800px)
+	img
+		width: 100%
+		height: auto
+		margin-bottom: 1vh
+		border-radius: 5px

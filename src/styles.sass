@@ -31,6 +31,7 @@ header
 
 #logo
 	max-width: 25%
+	min-width: 300px
 	height: auto
 
 /*Headline and navbar*/
@@ -76,14 +77,8 @@ main
 	display: flex
 	flex-direction: column
 	justify-content: flex-start
-	margin: 0px
 
 /*Social media links*/
-#altplatformheadline 
-	font-family: manrope-medium
-	font-size: 30px
-	margin-top: 50px
-
 #socialmedia 
 	width: 100%
 	height: 200px
@@ -91,6 +86,12 @@ main
 	flex-direction: column
 	justify-content: flex-start
 	align-items: flex-start
+	margin-bottom: 30px
+
+#altplatformheadline 
+	font-family: manrope-medium
+	font-size: 30px
+	margin-top: 30px
 
 .platform 
 	width: 120px
@@ -104,8 +105,10 @@ main
 	margin-right: 10px
 
 #links
+	width: 100%
+	height: auto
 	display: flex
-	margin-top: 20px
+	margin-top: 10px
 
 .linkprofiles 
 	width: 120px
@@ -134,8 +137,6 @@ footer
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-top: 70px
-	margin-bottom: 20px
 
 .copyright 
 	font-family: manrope-medium
@@ -146,30 +147,21 @@ footer
 /*MOBILE-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-device-width: 800px)  /*-- phone --*/
-	*
-		margin:0
-		padding:0
-	
-	a 
-		margin:0
-		padding:0
-
 	/*setting the general width of the viewport*/
-	#wrapper 
-		width: 93%
+	body 
+		width: 95%
 		height: auto
 
 	/*Heading-area*/
 	header 
 		width: 100%
-		height: 350px
+		height: 100px
 		display: flex
-		justify-content: flex-start
+		justify-content: center
 		align-items: center
-		flex-direction: column
 	
 	#logo 
-		margin-top: 100px
+		margin-top: 0px
 		max-width: 80%
 		height: auto
 
@@ -183,13 +175,12 @@ footer
 	
 	#headline 
 		font-family: manrope-medium
-		font-size: 70px
+		font-size: 30px
 	
 	#navbutton 
 		float: right
 		margin-bottom: 1px
-		font-family: manrope-medium
-		font-size: 50px
+		font-size: 15px
 		color: black
 		border: 1px solid #a0a0a0 
 		border-radius: 5px
@@ -199,12 +190,7 @@ footer
 	main 
 		width: 100%
 		height: auto
-		margin: auto
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
-		margin-top: 20px
+		margin: 0px
 	
 	#divmulticolumns 
 		width: 100%
@@ -221,48 +207,46 @@ footer
 		justify-content: flex-start
 
 	/*Social media links*/
-	#altplatformheadline 
-		font-family: manrope-medium
-		font-size: 50px
-		margin-top: 50px
-		align-self: flex-start
-	
-	.socialmedia 
+	#socialmedia 
 		width: 100%
-		height: 250px
+		height: auto
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+
+	#altplatformheadline 
+		font-size: 20px
+		align-self: flex-start
+		margin-top: 20px
+	
+	#links
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 		align-items: center
-		margin-top: 30px
-		margin-bottom: 30px
-	
+
 	.platform 
-		width: 300px
+		width: 100%
 		height: 100%
 		display: flex
 		flex-direction: column
-		justify-content: space-around
+		justify-content: space-betweem
 		align-items: center
 		border: 1px solid #a0a0a0
 		border-radius: 5px
 	
-	.platform:hover 
-		background-color: #f6f6f6
-		transition: 0.2s background-color
-	
 	.icon 
-		font-size: 80px
-		margin-top: 20px
+		font-size: 20px
 	
 	.text 
 		font-family: manrope-light
-		font-size: 40px
-		margin-bottom: 20px
+		font-size: 15px
 	
 	.linkprofiles 
-		width: 300px
+		width: 23%
 		height: 100%
+		margin-right: 0px
 
 	/*Footer*/
 	footer 
@@ -271,10 +255,8 @@ footer
 		display: flex
 		justify-content: center
 		align-items: center
-		margin-top: 50px
-		margin-bottom: 100px
 	
 	.copyright 
 		font-family: manrope-medium
-		font-size: 35px
+		font-size: 13px
 		color: #a0a0a0

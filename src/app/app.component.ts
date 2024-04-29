@@ -9,12 +9,10 @@ import { ProjectcontentComponent } from './projectcontent/projectcontent.compone
 import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponent.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { NavbarComponent } from './navbar/navbar.component';
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ContactinfoComponent, AboutmecontentComponent, IndexcontentComponent, PhotocontentComponent, VideocontentComponent, ProjectcontentComponent, FooterComponent, HeaderComponent, NavbarComponent, NotfoundcomponentComponent],
+  imports: [RouterOutlet, ContactinfoComponent, AboutmecontentComponent, IndexcontentComponent, PhotocontentComponent, VideocontentComponent, ProjectcontentComponent, FooterComponent, HeaderComponent, NotfoundcomponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })

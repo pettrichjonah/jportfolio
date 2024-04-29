@@ -1,0 +1,70 @@
+#socialmedia 
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-start
+	margin-bottom: 50px
+
+#altplatformheadline 
+	font-family: manrope-medium
+	font-size: 30px
+
+.platform 
+	width: auto
+	height: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	align-items: center
+	transition: 0.3s
+	border: 1px solid #a0a0a0
+	border-radius: 5px
+	margin-right: 10px
+
+.platform:hover, 
+.platform:focus
+	box-shadow: 2px 2px 3px 1px #eeeeee
+
+#links
+	width: 100%
+	height: auto
+	display: flex
+	margin-top: 10px
+
+.icon 
+	font-size: 20px
+	margin: 7px 5px
+	margin-left: 10px
+
+.text 
+	font-family: manrope-light
+	font-size: 18px
+	margin: 7px 5px
+	margin-right: 10px
+
+@media screen and (max-device-width: 800px)  /*-- phone --*/
+	#socialmedia 
+		width: 100%
+		height: auto
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 20px
+
+	#altplatformheadline 
+		font-size: 20px
+		align-self: flex-start
+	
+	#links
+		display: flex
+		flex-direction: row
+		align-items: center
+		flex-wrap: wrap
+		margin-top: 0px
+
+	.platform
+		margin-top: 10px
+

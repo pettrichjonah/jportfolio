@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-photocontent',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './photocontent.component.sass'
 })
 export class PhotocontentComponent {
-
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("Photos - JP Media");
+  }
 }

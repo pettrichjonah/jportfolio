@@ -2,6 +2,7 @@
 
 Feature request list: 
 - automatically downsize pictures to improve performance/load times
+- sticky navbar
 
 Bugs to fix:
-- Initiate html title change on component refresh
+- fix margins in between images on Photos-subpage 

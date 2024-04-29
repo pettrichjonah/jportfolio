@@ -6,6 +6,7 @@ a, img
 	color: black
 	-webkit-tap-highlight-color: transparent
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	text-decoration: none
 
 /*initializing the fonts*/
 @font-face
@@ -30,6 +31,12 @@ nav
 	flex-direction: row
 	justify-content: space-between
 	align-items: center
+	background-color: white
+
+/* for sticky navbar */
+.sticky
+	position: fixed
+	top: 0
 
 #headline
 	font-family: manrope-medium
@@ -37,7 +44,6 @@ nav
 	display: inline
 	
 #navbutton
-	float: right
 	margin-top: 2px
 	font-family: manrope-medium
 	font-size: 20px
@@ -95,7 +101,7 @@ main
 	#navbutton 
 		float: right
 		margin-bottom: 1px
-		font-size: 15px
+		font-size: 17px
 		color: black
 		border: 1px solid #a0a0a0 
 		border-radius: 5px

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-indexcontent',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './indexcontent.component.sass'
 })
 export class IndexcontentComponent {
-
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("Home - JP Media");
+  }
 }

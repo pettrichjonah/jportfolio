@@ -9,20 +9,42 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <script>
-  function reply_click(clicked_id) {
-	var modal = document.getElementById("modal");
-	var img = document.getElementById(clicked_id);
-	var modalImg = document.getElementById("modalimg");
+	//modal functionality
+	function reply_click(clicked_id) {
+		var modal = document.getElementById("modal");
+		var img = document.getElementById(clicked_id);
+		var modalImg = document.getElementById("modalimg");
 
-	modal.style.display = "block";
-	modalImg.src = img.src;
+		modal.style.display = "block";
+		modalImg.src = img.src;
 
-	var span = document.getElementById("modal");
+		var span = document.getElementById("modal");
 
-	span.onclick = function () {
-		modal.style.display = "none";
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
 	}
-}
+
+	//Sticky navbar behaviour, not fully working yet
+	// document.addEventListener("DOMContentLoaded",
+	// 	function () {
+	// 		window.onscroll = function() {myFunction()};
+
+	// 		// Get the navbar
+	// 		var navbar = document.getElementById("nav");
+
+	// 		// Get the offset position of the navbar
+	// 		var sticky = navbar.offsetTop;
+
+	// 		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	// 		function myFunction() {
+	// 			if (window.pageYOffset >= sticky) {
+	// 				navbar.classList.add("sticky")
+	// 			} else {
+	// 				navbar.classList.remove("sticky");
+	// 			}
+	// 		}
+	// 	})
 </script>
 <body>
   <app-root>

@@ -12,16 +12,19 @@
 	//modal functionality
 	function reply_click(clicked_id) {
 		var modal = document.getElementById("modal");
+		var body = document.getElementById("body");
 		var img = document.getElementById(clicked_id);
 		var modalImg = document.getElementById("modalimg");
 
-		modal.style.display = "block";
-		modalImg.src = img.src;
+		modal.style.display = "block"; //shows modal
+		modalImg.src = img.src; //links clicked image to modal image
+		body.style.overflow = "hidden"; //hides scrollbar when modal opens
 
 		var span = document.getElementById("modal");
 
 		span.onclick = function () {
-			modal.style.display = "none";
+			modal.style.display = "none"; //hides modal
+			body.style.overflow = "visible"; //shows scrollbar when modal closes
 		}
 	}
 
@@ -46,7 +49,7 @@
 	// 		}
 	// 	})
 </script>
-<body>
+<body id="body">
   <app-root>
   </app-root>
 </body>

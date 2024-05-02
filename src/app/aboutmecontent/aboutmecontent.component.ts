@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AgecalcService } from '../agecalc.service';
 
 @Component({
   selector: 'app-aboutmecontent',
@@ -9,7 +10,11 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './aboutmecontent.component.sass'
 })
 export class AboutmecontentComponent {
-  constructor(private titleService:Title) {
+  age: Number;
+
+  constructor(private titleService:Title, private ageCalcService: AgecalcService) {
     this.titleService.setTitle("About me - JP Media");
+    
+    this.age = ageCalcService.calculateAge()
   }
 }

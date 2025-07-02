@@ -10,11 +10,10 @@ import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponen
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, ContactinfoComponent, AboutmecontentComponent, IndexcontentComponent, PhotocontentComponent, VideocontentComponent, ProjectcontentComponent, FooterComponent, HeaderComponent, NotfoundcomponentComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+    selector: 'app-root',
+    imports: [RouterOutlet, ContactinfoComponent, AboutmecontentComponent, IndexcontentComponent, PhotocontentComponent, VideocontentComponent, ProjectcontentComponent, FooterComponent, HeaderComponent, NotfoundcomponentComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.sass'
 })
 export class AppComponent {
   title = 'jportfolio';

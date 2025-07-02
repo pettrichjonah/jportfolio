@@ -3,11 +3,9 @@ import { Title } from '@angular/platform-browser';
 import { AgecalcService } from '../agecalc.service';
 
 @Component({
-  selector: 'app-aboutmecontent',
-  standalone: true,
-  imports: [],
-  templateUrl: './aboutmecontent.component.html',
-  styleUrl: './aboutmecontent.component.sass'
+    selector: 'app-aboutmecontent',
+    templateUrl: './aboutmecontent.component.html',
+    styleUrl: './aboutmecontent.component.sass'
 })
 export class AboutmecontentComponent {
   age: Number;

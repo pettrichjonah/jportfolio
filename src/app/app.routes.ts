@@ -7,10 +7,10 @@ import { ProjectcontentComponent } from './projectcontent/projectcontent.compone
 import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponent.component';
 
 export const routes: Routes = [
-	{path: '', component: IndexcontentComponent},
-	{path: 'photos', component: PhotocontentComponent},
-	{path: 'videos', component: VideocontentComponent},
-	{path: 'projects', component: ProjectcontentComponent},
-	{path: 'aboutme', component: AboutmecontentComponent},
-	{path: '*', component: NotfoundcomponentComponent}
+	{ path: '', component: IndexcontentComponent },
+	{ path: 'photos', component: PhotocontentComponent },
+	{ path: 'videos', component: VideocontentComponent },
+	{ path: 'projects', component: ProjectcontentComponent },
+	{ path: 'aboutme', component: AboutmecontentComponent },
+	{ path: '*', component: NotfoundcomponentComponent }
 ];

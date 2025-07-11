@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, viewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,17 @@ import { Title } from '@angular/platform-browser';
     styleUrl: './photocontent.component.sass'
 })
 export class PhotocontentComponent {
+
+  @ViewChild('closeModalButton') closeModalButton!: ElementRef<HTMLSpanElement>; 
+
   constructor(private titleService:Title) {
     this.titleService.setTitle("Photos - JP Media");
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Escape') {
+      this.closeModalButton.nativeElement.click();
+    }
   }
 }

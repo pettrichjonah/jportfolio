@@ -1,10 +1,15 @@
 <div id="nav-sentinel"></div>
 <nav [class.stuck]="isStuck">
     <h3 id="headline" [class.stuck]="isStuck">{{ getCurrentRoute() }}</h3>
-	@if (getCurrentRoute() === "Welcome") {
-    	<a href="/aboutme"><p id="navbutton" [class.stuck]="isStuck">About me</p></a>
+	@if (!isStuck) {
+		@if (getCurrentRoute() === "Welcome") {
+			<a href="/aboutme"><p id="navbutton" [class.stuck]="isStuck">About me</p></a>
+		}
+		@else {
+			<a href=""><p id="navbutton" [class.stuck]="isStuck">Home</p></a>
+		}
 	}
 	@else {
-    	<a href=""><p id="navbutton" [class.stuck]="isStuck">Home</p></a>
+		<button (click)="scrollToTop()" id="scrolltopbutton">↑</button>
 	}
 </nav>

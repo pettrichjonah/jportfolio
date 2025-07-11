@@ -54,4 +54,8 @@ export class NavigationBarComponent {
         return "Got lost?";
     }
   }
+
+  public scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

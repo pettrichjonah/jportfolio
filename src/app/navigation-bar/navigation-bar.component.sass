@@ -9,12 +9,13 @@ nav
   top: 0
 
   &.stuck
-    height: 75px
+    height: 80px
     background: linear-gradient(
     to bottom,
     #0c0c0c,
     rgba(0, 0, 0, 0) 
   	)
+    transition: 0.2s
 
 #headline
   font-family: manrope-medium
@@ -23,7 +24,7 @@ nav
 
   &.stuck
     color: white
-    margin-left: 20px
+    margin-left: 25px
 
 #navbutton
   float: right
@@ -35,14 +36,23 @@ nav
   border-radius: 5px
   padding: 4px 9px
 
-  &.stuck
-    color: white
-    margin-right: 20px
+  &:hover, 
+  &:focus
+    box-shadow: 2px 2px 3px 1px #eeeeee
+    transition: 0.2s
 
-#navbutton:hover, 
-#navbutton:focus
-  box-shadow: 2px 2px 3px 1px #eeeeee
-  transition: 0.2s
+#scrolltopbutton
+  float: right
+  width: 40px
+  margin-right: 20px
+  font-family: manrope-medium
+  font-size: 30px
+  color: white
+  border-radius: 5px
+  padding: 4px 9px
+  cursor: pointer
+  background: transparent
+  border: none
 
 @media screen and (max-device-width: 800px)  /*-- phone --*/
   nav

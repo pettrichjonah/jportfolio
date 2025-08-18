@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AgecalcService } from '../agecalc.service';
+import { AgecalcService } from '../services/agecalc.service';
 
 @Component({
     selector: 'app-aboutmecontent',

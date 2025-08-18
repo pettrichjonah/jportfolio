@@ -8,7 +8,7 @@ import { NotfoundcomponentComponent } from './notfoundcomponent/notfoundcomponen
 
 export const routes: Routes = [
 	{ path: '', component: IndexcontentComponent },
-	{ path: 'photos', component: PhotocontentComponent },
+	{ path: 'spotlight', component: PhotocontentComponent },
 	{ path: 'videos', component: VideocontentComponent },
 	{ path: 'projects', component: ProjectcontentComponent },
 	{ path: 'aboutme', component: AboutmecontentComponent },

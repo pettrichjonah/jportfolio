@@ -42,8 +42,8 @@ export class NavigationBarComponent {
     switch (this.currentRoute) {
       case "":
         return "Welcome";
-      case "photos":
-        return "Photos";
+      case "spotlight":
+        return "Spotlight";
       case "videos":
         return "Videos";
       case "projects":

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProtectedimageComponent } from "../protectedimage/protectedimage.component";
 import { ImageDirectories, ImageService } from '../services/image.service';
@@ -15,7 +15,7 @@ export class PhotocontentComponent {
     private titleService: Title,
     private imageService: ImageService
   ) {
-    this.titleService.setTitle("Photos - JP Media");
+    this.titleService.setTitle("Spotlight - JP Media");
     this.imageService.setCategory(ImageDirectories.EditorsPicks);
   }
 }

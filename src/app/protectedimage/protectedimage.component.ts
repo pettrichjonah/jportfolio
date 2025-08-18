@@ -11,10 +11,31 @@ import { ImageService, ImageDirectories } from '../services/image.service';
 })
 export class ProtectedimageComponent {
 
+  @ViewChild('closeModalButton') closeModalButton!: ElementRef<HTMLSpanElement>; 
+
   @Input() public name = "";
   @Input() set category(value: ImageDirectories) {
     this.imageService.setCategory(value);
   }
 
   constructor(public imageService: ImageService) {}
+  
+  isModalOpen = false;
+
+  openModal() {
+    this.isModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    document.body.style.overflow = 'visible';
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Escape' && this.isModalOpen) {
+      this.closeModal();
+    }
+  }
 }

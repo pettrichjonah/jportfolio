@@ -40,8 +40,6 @@ export class NavigationBarComponent {
 
   public getCurrentRoute(): string {
     switch (this.currentRoute) {
-      case "":
-        return "Welcome";
       case "spotlight":
         return "Spotlight";
       case "videos":
@@ -51,7 +49,7 @@ export class NavigationBarComponent {
       case "aboutme":
         return "About me";
       default:
-        return "Got lost?";
+        return "Welcome";
     }
   }
 

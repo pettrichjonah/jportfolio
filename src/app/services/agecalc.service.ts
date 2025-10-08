@@ -5,24 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class AgecalcService {
   calculateAge() {
-    var birthdate: Date = new Date(2001,9,2)
-    var currentdate: Date = new Date()
-    var yearDif = currentdate.getFullYear() - birthdate.getFullYear();
-    
-    if(currentdate.getMonth()<birthdate.getMonth())
-    {
-      yearDif--
+    var birthdate: Date = new Date(2001,9,2);
+    var today: Date = new Date();
+
+    let yearsDiff = today.getFullYear() - birthdate.getFullYear();
+    const monthsDiff = today.getMonth() - birthdate.getMonth();
+    if (monthsDiff < 0 || (monthsDiff === 0 && today.getDate() < birthdate.getDate())) {
+        yearsDiff--;
     }
-    else {
-      if(currentdate.getDay()<birthdate.getDay())
-      {
-        yearDif--
-      }
-    }  
 
-    return yearDif;
-  }
-
-  constructor(){ 
+    return yearsDiff;
   }
 }

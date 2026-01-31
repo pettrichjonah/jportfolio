@@ -16,11 +16,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'yarn'
+          node-version-file: '.node-version'
+      
+      - name: Enable Corepack
+        run: corepack enable
       
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       
       - name: Build Angular app
         run: yarn build --configuration production
@@ -31,6 +33,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/jportfolio/browser
+          local-dir: ./dist/jportfolio/browser/
           server-dir: ./
           dangerous-clean-slate: false

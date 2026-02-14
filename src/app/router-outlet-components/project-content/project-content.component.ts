@@ -14,7 +14,7 @@ export class ProjectContentComponent {
     private titleService: Title,
     private imageService: ImagePathResolutionService
   ) {
-    this.titleService.setTitle("Projects - JP Media");
+    this.titleService.setTitle("Projects / JP Media");
     this.imageService.setCategory(ImageDirectories.Jobs);
   }
 }

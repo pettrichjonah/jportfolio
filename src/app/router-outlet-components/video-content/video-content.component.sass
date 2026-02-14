@@ -1,0 +1,20 @@
+@import '../../../styles.sass'
+	
+.yt-embed-wrapper
+	position: relative
+	overflow: hidden
+	padding-top: 56.25%
+	border-radius: $border-radius
+	margin-bottom: 8px
+
+.yt-embed-iframe
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border: 0
+
+@media screen and (max-device-width: 800px)
+	.yt-embed-wrapper 
+		border-radius: 0px

@@ -6,10 +6,10 @@
 			<a href="/aboutme"><p id="navbutton" [class.stuck]="isStuck">About me</p></a>
 		}
 		@else {
-			<a href=""><p id="navbutton" [class.stuck]="isStuck">Home</p></a>
+			<a href=""><p id="navbutton" [class.stuck]="isStuck"><i class="fa-regular fa-house"></i></p></a>
 		}
 	}
 	@else {
-		<button (click)="scrollToTop()" id="scrolltopbutton">↑</button>
+		<button (click)="scrollToTop()" id="scrolltopbutton"><i class="fa-solid fa-chevron-up"></i></button>
 	}
 </nav>

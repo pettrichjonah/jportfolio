@@ -13,6 +13,7 @@ export class NavigationBarComponent {
 
   public currentRoute = "";
   public isStuck = false;
+  public isMobile = window.matchMedia("(max-device-width: 800px)").matches;
 
   @ViewChild('navbar') navbar!: ElementRef;
 

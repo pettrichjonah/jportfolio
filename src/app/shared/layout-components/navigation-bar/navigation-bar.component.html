@@ -1,15 +1,14 @@
 <div id="nav-sentinel"></div>
-<nav [class.stuck]="isStuck">
-    <h3 id="headline" [class.stuck]="isStuck">{{ getCurrentRoute() }}</h3>
-	@if (!isStuck) {
-		@if (getCurrentRoute() === "Welcome") {
-			<a href="/aboutme"><p class="bordered-button"[class.stuck]="isStuck">About me</p></a>
+@if (!(isMobile && getCurrentRoute() === "Welcome")) {
+	<nav [class.stuck]="isStuck">
+		@if (!isStuck) {
+			@if (getCurrentRoute() !== "Welcome") {
+				<a href=""><p class="bordered-button" id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/chevron-left.png" alt="Home Icon"></p></a>
+			}
 		}
-		@else {
-			<a href=""><p class="bordered-button" id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/house.png" alt="Home Icon">Home</p></a>
+	    <h3 id="headline" [class.stuck]="isStuck">{{ getCurrentRoute() }}</h3>
+		@if (isStuck) {
+			<button (click)="scrollToTop()" id="scroll-top-button"><img id="chevron-icon" src="assets/icons/chevron-up.png" alt="Chevron Up Icon"></button>
 		}
-	}
-	@else {
-		<button (click)="scrollToTop()" id="scroll-top-button"><img id="chevron-icon" src="assets/icons/chevron-up.png" alt="Chevron Up Icon"></button>
-	}
-</nav>
+	</nav>
+}

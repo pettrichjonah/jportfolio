@@ -3,10 +3,10 @@
     <h3 id="headline" [class.stuck]="isStuck">{{ getCurrentRoute() }}</h3>
 	@if (!isStuck) {
 		@if (getCurrentRoute() === "Welcome") {
-			<a href="/aboutme"><p id="nav-button" [class.stuck]="isStuck">About me</p></a>
+			<a href="/aboutme"><p class="bordered-button"[class.stuck]="isStuck">About me</p></a>
 		}
 		@else {
-			<a href=""><p id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/house.png" alt="Home Icon">Home</p></a>
+			<a href=""><p class="bordered-button" id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/house.png" alt="Home Icon">Home</p></a>
 		}
 	}
 	@else {

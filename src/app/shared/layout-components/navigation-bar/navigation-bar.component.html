@@ -3,13 +3,13 @@
     <h3 id="headline" [class.stuck]="isStuck">{{ getCurrentRoute() }}</h3>
 	@if (!isStuck) {
 		@if (getCurrentRoute() === "Welcome") {
-			<a href="/aboutme"><p id="navbutton" [class.stuck]="isStuck">About me</p></a>
+			<a href="/aboutme"><p id="nav-button" [class.stuck]="isStuck">About me</p></a>
 		}
 		@else {
-			<a href=""><p id="navbutton" [class.stuck]="isStuck"><i class="fa-regular fa-house"></i></p></a>
+			<a href=""><p id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/house.png" alt="Home Icon">Home</p></a>
 		}
 	}
 	@else {
-		<button (click)="scrollToTop()" id="scrolltopbutton"><i class="fa-solid fa-chevron-up"></i></button>
+		<button (click)="scrollToTop()" id="scroll-top-button"><i class="fa-solid fa-chevron-up"></i></button>
 	}
 </nav>

@@ -29,7 +29,7 @@ nav
         color: white
         margin-left: 25px
 
-#navbutton
+#nav-button
     float: right
     margin-top: 2px
     font-family: regular-font
@@ -44,7 +44,29 @@ nav
         box-shadow: 2px 2px 3px 1px #eeeeee
         transition: 0.2s
 
-#scrolltopbutton
+#home-button
+    float: right
+    margin-top: 2px
+    font-family: regular-font
+    font-size: 20px
+    color: black
+    border: 1px solid #a0a0a0
+    border-radius: $border-radius-button
+    padding: 4px 9px
+    display: flex
+    align-items: center
+    gap: 4px
+
+    &:hover, 
+    &:focus
+        box-shadow: 2px 2px 3px 1px #eeeeee
+        transition: 0.2s
+        
+#home-icon
+    width: 20px
+    height: 20px
+
+#scroll-top-button
     float: right
     margin-top: 7px
     margin-right: 15px
@@ -64,5 +86,8 @@ nav
         font-size: 27px
         margin-left: 13px
 
-    #navbutton
+    #nav-button
+        margin-right: 13px
+
+    #home-button
         margin-right: 13px

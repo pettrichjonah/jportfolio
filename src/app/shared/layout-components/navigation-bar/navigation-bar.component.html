@@ -1,16 +1,16 @@
 <div id="nav-sentinel"></div>
 @if (!(isMobile && getCurrentRoute() === "Welcome")) {
-	<nav [class.stuck]="isStuck">
+	<nav [class.stuck]="isStuck" (click)="isStuck && scrollToTop()">
 		@if (!isStuck) {
 			@if (getCurrentRoute() !== "Welcome") {
-				<a href=""><p class="bordered-button" id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/chevron-left.png" alt="Home Icon"></p></a>
+				<a href="" (click)="$event.stopPropagation()"><p class="bordered-button" id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/chevron-left.png" alt="Home Icon"></p></a>
 			}
-			<a [attr.href]="getCurrentRoute() !== 'Welcome' ? '' : null" id="headline" [class.stuck]="isStuck"><h3>{{ getCurrentRoute() }}</h3></a>
+			<a [attr.href]="getCurrentRoute() !== 'Welcome' ? '' : null" id="headline" [class.stuck]="isStuck" (click)="getCurrentRoute() !== 'Welcome' && $event.stopPropagation()"><h3>{{ getCurrentRoute() }}</h3></a>
 		} @else {
-			<a [attr.href]="null" id="headline" [class.stuck]="isStuck"><h3>{{ getCurrentRoute() }}</h3></a>
+			<a id="headline" [class.stuck]="isStuck"><h3>{{ getCurrentRoute() }}</h3></a>
 		}
 		@if (isStuck) {
-			<button (click)="scrollToTop()" id="scroll-top-button"><img id="chevron-icon" src="assets/icons/chevron-up.png" alt="Chevron Up Icon"></button>
+			<button (click)="$event.stopPropagation(); scrollToTop()" id="scroll-top-button"><img id="chevron-icon" src="assets/icons/chevron-up.png" alt="Chevron Up Icon"></button>
 		}
 	</nav>
 }

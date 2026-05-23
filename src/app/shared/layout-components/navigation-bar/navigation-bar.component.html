@@ -5,8 +5,10 @@
 			@if (getCurrentRoute() !== "Welcome") {
 				<a href=""><p class="bordered-button" id="home-button" [class.stuck]="isStuck"><img id="home-icon" src="assets/icons/chevron-left.png" alt="Home Icon"></p></a>
 			}
+			<a [attr.href]="getCurrentRoute() !== 'Welcome' ? '' : null" id="headline" [class.stuck]="isStuck"><h3>{{ getCurrentRoute() }}</h3></a>
+		} @else {
+			<a [attr.href]="null" id="headline" [class.stuck]="isStuck"><h3>{{ getCurrentRoute() }}</h3></a>
 		}
-	    <h3 id="headline" [class.stuck]="isStuck">{{ getCurrentRoute() }}</h3>
 		@if (isStuck) {
 			<button (click)="scrollToTop()" id="scroll-top-button"><img id="chevron-icon" src="assets/icons/chevron-up.png" alt="Chevron Up Icon"></button>
 		}

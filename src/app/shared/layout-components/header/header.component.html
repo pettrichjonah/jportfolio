@@ -1,9 +1,14 @@
 <header>
-    <a class="logo-link" href="">
-        <img id="logo" src="../../assets/logo.png" alt="logo">
+    <div class="logo-wrapper">
+        <a href=""><img id="logo" src="../../assets/logo.png" alt="logo"></a>
         <div class="logo-text">
-            <span class="logo-name">Jonah Pettrich</span>
-            <span class="logo-subtitle">Photo | Graphic | Video</span>
+            <span class="logo-subtitle">
+                <span class="subtitle-static" [class.hidden]="showPhrases()">{{ initialHeaderText }}</span>
+                <span class="subtitle-dynamic" [class.visible]="showPhrases()" (click)="catchphraseService.stop();">
+                    <span class="subtitle-prefix">frames</span>&nbsp;
+                    <span class="subtitle-word" [class.visible]="initialHeaderTextActive()">{{ phrase() }}</span>
+                </span>
+            </span>
         </div>
-    </a>
+    </div>
 </header>

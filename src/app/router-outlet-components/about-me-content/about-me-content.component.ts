@@ -11,8 +11,8 @@ export class AboutMeContentComponent {
   age: Number;
 
   constructor(private titleService:Title, private ageCalcService: AgeCalculatorService) {
-    this.titleService.setTitle("About me | jpframes.at");
+    this.titleService.setTitle("About me - jpframes.at");
     
-    this.age = ageCalcService.calculateAge()
+    this.age = this.ageCalcService.calculateAge()
   }
 }

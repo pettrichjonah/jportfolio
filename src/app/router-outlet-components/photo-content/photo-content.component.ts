@@ -15,7 +15,7 @@ export class PhotoContentComponent {
     private titleService: Title,
     private imageService: ImagePathResolutionService
   ) {
-    this.titleService.setTitle("Spotlight | jpframes.at");
+    this.titleService.setTitle("Spotlight - jpframes.at");
     this.imageService.setCategory(ImageDirectories.EditorsPicks);
   }
 }

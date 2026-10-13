@@ -3,7 +3,7 @@
         <a href=""><img id="logo" src="../../assets/logo.png" alt="logo"></a>
         <div class="logo-text">
             <span class="logo-subtitle">
-                <span class="subtitle-static" [class.hidden]="showPhrases()">{{ initialHeaderText }}</span>
+                <span class="subtitle-static" [class.hidden]="showPhrases()">{{ i18n.translate('Photo | Graphic | Video', 'Foto | Grafik | Video') }}</span>
                 <span class="subtitle-dynamic" [class.visible]="showPhrases()" (click)="catchphraseService.stop();">
                     <span class="subtitle-prefix">frames</span>&nbsp;
                     <span class="subtitle-word" [class.visible]="initialHeaderTextActive()">{{ phrase() }}</span>

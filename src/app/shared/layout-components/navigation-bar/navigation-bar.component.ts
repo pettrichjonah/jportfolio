@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -10,6 +11,7 @@ import { filter } from 'rxjs';
 })
 export class NavigationBarComponent {
   private router = inject(Router);
+  public i18n = inject(LanguageService);
 
   public currentRoute = "";
   public isStuck = false;
@@ -41,16 +43,20 @@ export class NavigationBarComponent {
   public getCurrentRoute(): string {
     switch (this.currentRoute) {
       case "spotlight":
-        return "Spotlight";
+        return this.i18n.translate('Spotlight', 'Galerie');
       case "videos":
-        return "Videos";
+        return this.i18n.translate('Videos', 'Videos');
       case "projects":
-        return "Projects";
+        return this.i18n.translate('Projects', 'Projekte');
       case "aboutme":
-        return "About me";
+        return this.i18n.translate('About me', 'Über mich');
       default:
-        return "Welcome";
+        return this.i18n.translate('Welcome', 'Willkommen');
     }
+  }
+
+  public isLandingPage(): boolean {
+    return this.currentRoute === '';
   }
 
   public scrollToTop(): void {

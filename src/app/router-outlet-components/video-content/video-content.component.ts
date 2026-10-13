@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
     selector: 'app-video-content',
@@ -7,7 +8,11 @@ import { Title } from '@angular/platform-browser';
     styleUrl: './video-content.component.sass'
 })
 export class VideoContentComponent {
+  public i18n = inject(LanguageService);
+
   constructor(private titleService:Title) {
-    this.titleService.setTitle("Videos - jpframes.at");
+    effect(() => {
+      this.titleService.setTitle(this.i18n.translate('Videos - jpframes.at', 'Videos - jpframes.at'));
+    });
   }
 }

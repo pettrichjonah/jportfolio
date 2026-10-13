@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-not-found',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './not-found.component.sass'
 })
 export class NotFoundComponent {
-
+  public i18n = inject(LanguageService);
 }

@@ -1,16 +1,22 @@
 <div id="socialmedia">
-    <h3 id="altplatformheadline">About + beyond</h3>
+    <div class="social-heading">
+        <h3 id="altplatformheadline">{{ i18n.translate('About + beyond', 'Kontakt + mehr') }}</h3>
+        <div class="language-switch" role="group" [attr.aria-label]="i18n.translate('Language', 'Sprache')">
+            <button type="button" [class.active]="i18n.language() === 'en'" [attr.aria-pressed]="i18n.language() === 'en'" (click)="i18n.setLanguage('en')">EN</button>
+            <button type="button" [class.active]="i18n.language() === 'de'" [attr.aria-pressed]="i18n.language() === 'de'" (click)="i18n.setLanguage('de')">DE</button>
+        </div>
+    </div>
     <div id="links">
         <a href="/aboutme" class="linkprofiles" style="color: black; text-decoration:none;">
             <div class="platform">
                 <i class="icon fa-solid fa-person-circle-question"></i>
-                <p class="text">Who I am</p>
+                <p class="text">{{ i18n.translate('Who I am', 'Über mich') }}</p>
             </div>
         </a>
         <a href="mailto:jonah.photography@gmail.com" class="linkprofiles" style="color: black; text-decoration:none;">
             <div class="platform">
                 <i class="icon fa fa-regular fa-envelope"></i>
-                <p class="text">Mail</p>
+                <p class="text">{{ i18n.translate('Mail', 'Mail') }}</p>
             </div>
         </a>
         <a href="https://www.instagram.com/jpframes.at/?hl=de" target="_blank" class="linkprofiles" style="color: black; text-decoration:none;">

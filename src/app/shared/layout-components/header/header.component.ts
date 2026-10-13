@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { CatchphraseService } from '../../services/catchphrase.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
     selector: 'app-header',
@@ -10,10 +11,10 @@ import { CatchphraseService } from '../../services/catchphrase.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
     public catchphraseService = inject(CatchphraseService);
+    public i18n = inject(LanguageService);
     private router = inject(Router);
     private routeSubscription?: Subscription;
 
-    public initialHeaderText = 'Photo | Graphic | Video';
     public phrase = this.catchphraseService.currentPhrase;
     public initialHeaderTextActive = this.catchphraseService.initialHeaderTextActive;
     public showPhrases = this.catchphraseService.showPhrases;

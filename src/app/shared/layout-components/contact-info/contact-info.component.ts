@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
@@ -8,4 +9,9 @@ import { LanguageService } from '../../services/language.service';
 })
 export class ContactInfoComponent {
     public i18n = inject(LanguageService);
+    private readonly router = inject(Router);
+
+    isAboutPage(): boolean {
+        return this.router.url.includes('/aboutme');
+    }
 }

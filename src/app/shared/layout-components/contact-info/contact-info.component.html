@@ -1,10 +1,7 @@
 <div id="socialmedia">
     <div class="social-heading">
         <h3 id="altplatformheadline">{{ i18n.translate('About + beyond', 'Kontakt + mehr') }}</h3>
-        <div class="language-switch" role="group" [attr.aria-label]="i18n.translate('Language', 'Sprache')">
-            <button type="button" [class.active]="i18n.language() === 'en'" [attr.aria-pressed]="i18n.language() === 'en'" (click)="i18n.setLanguage('en')">EN</button>
-            <button type="button" [class.active]="i18n.language() === 'de'" [attr.aria-pressed]="i18n.language() === 'de'" (click)="i18n.setLanguage('de')">DE</button>
-        </div>
+        <app-language-switcher></app-language-switcher>
     </div>
     <div id="links">
         <a href="mailto:jonah.photography@gmail.com" class="linkprofiles" style="color: black; text-decoration:none;">

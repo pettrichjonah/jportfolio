@@ -1,0 +1,60 @@
+@import '../../../../../styles.sass'
+
+:host
+	display: flex
+	flex: 0 0 auto
+
+.language-switch
+	position: relative
+	display: flex
+	flex: 0 0 auto
+	height: var(--headline-height)
+	padding: 0
+	overflow: hidden
+	appearance: none
+	color: inherit
+	font: inherit
+	font-family: regular-font
+	border: 1px solid #a0a0a0
+	border-radius: $border-radius-button
+	background: #e6e6e6
+	cursor: pointer
+	transition: 0.3s
+
+	&:hover
+		box-shadow: 2px 2px 3px 1px #eeeeee
+
+	&:focus-visible
+		outline: 2px solid currentColor
+		outline-offset: 2px
+
+	.selection-indicator
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 50%
+		border-radius: $border-radius-button
+		background: #fff
+		pointer-events: none
+		transition: transform 180ms ease
+		z-index: 0
+
+		&.german
+			transform: translateX(100%)
+
+	.language-option
+		box-sizing: border-box
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		width: calc(var(--headline-height) * 1.4)
+		min-width: 0
+		padding: calc(var(--headline-height) * 0.12) calc(var(--headline-height) * 0.14)
+		font: inherit
+		z-index: 1
+
+@media (prefers-reduced-motion: reduce)
+	.language-switch .selection-indicator
+		transition: none

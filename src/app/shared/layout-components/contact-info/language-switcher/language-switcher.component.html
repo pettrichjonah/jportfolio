@@ -1,0 +1,11 @@
+<button
+    type="button"
+    class="language-switch"
+    role="switch"
+    [attr.aria-label]="i18n.translate('Language', 'Sprache')"
+    [attr.aria-checked]="i18n.language() === 'de'"
+    (click)="toggleLanguage()">
+    <span class="selection-indicator" [class.german]="i18n.language() === 'de'" aria-hidden="true"></span>
+    <span class="language-option">EN</span>
+    <span class="language-option">DE</span>
+</button>
